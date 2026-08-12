@@ -7,7 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class VitrineApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VitrineApplication.class, args);
+		
+	SpringApplication.run(VitrineApplication.class, args);
+
+	System.out.println("Aplicação iniciada com sucesso!");
+	
 	}
 
 }
