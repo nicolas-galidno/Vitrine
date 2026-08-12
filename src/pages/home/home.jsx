@@ -1,41 +1,51 @@
 import "./home.css";
 
-function home() {
+function Home({ entrar }) {
   return (
-    <><main className="home">
-      <div className="home__container">
+    <main className="home">
+      <div className="home-container">
 
-        <header className="home__header">
+        <header className="home-header">
           <h2 className="logo">Vitrine</h2>
         </header>
 
         <section className="home-content">
+
           <h1>
-            Encontre
+            Encontre.
             <br />
-            Divulgue
+            Divulgue.
             <br />
             Conecte.
           </h1>
 
           <p>
-            Encontre pequenos negócios, produtos e serviços em um só lugar.
+            Encontre pequenos negócios, produtos e serviços
+            em um só lugar.
           </p>
 
           <div className="home-buttons">
-            <button className="btn btn--primary">Entrar
+
+            <button
+              className="btn btn-primary"
+              onClick={entrar}
+            >
+              Entrar
             </button>
 
-            <button className="btn btn-secondary">Criar minha conta
+            <button
+              className="btn btn-secondary"
+            >
+              Criar minha conta
             </button>
+
           </div>
+
         </section>
 
       </div>
-    </main><footer className="home__footer">
-        <p>© 2026 Vitrine. Todos os direitos reservados.</p>
-      </footer></>
+    </main>
   );
 }
 
-export default home;
+export default Home;
