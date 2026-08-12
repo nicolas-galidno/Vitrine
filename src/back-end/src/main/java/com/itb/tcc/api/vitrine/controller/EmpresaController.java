@@ -36,7 +36,7 @@ public class EmpresaController {
   // Utilize "?" ou "Object" quando o retorno pode ser objetos diferentes
 
   @GetMapping("/{id}")
-  public ResponseEntity<?> findById(@PathVariable String id) {
+  public ResponseEntity<?> findById(@PathVariable String id) {pinto
     try {
       Long idLong = Long.parseLong(id);
       Empresas empresas = empresasService.buscarPorId(idLong);
