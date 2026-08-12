@@ -1,4 +1,4 @@
-import ".home/home.css";
+import "./home.css";
 
 function home() {
   return (
@@ -38,4 +38,4 @@ function home() {
   );
 }
 
-export default Home;
+export default home;
