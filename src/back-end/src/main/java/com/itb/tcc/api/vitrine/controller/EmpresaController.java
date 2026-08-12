@@ -25,6 +25,7 @@ public class EmpresaController {
     private EmpresasService empresasService = new EmpresasService();
 
 
+
   @GetMapping
   public ResponseEntity<List<Empresas>> findAll() {
     return ResponseEntity.ok(empresasService.listarEmpresas());
