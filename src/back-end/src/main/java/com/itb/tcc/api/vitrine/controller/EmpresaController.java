@@ -24,19 +24,15 @@ public class EmpresaController {
 
     private EmpresasService empresasService = new EmpresasService();
 
-  // Listando todos os produtos
 
   @GetMapping
   public ResponseEntity<List<Empresas>> findAll() {
     return ResponseEntity.ok(empresasService.listarEmpresas());
   }
 
-  // Buscar empresa pelo Id
-
-  // Utilize "?" ou "Object" quando o retorno pode ser objetos diferentes
 
   @GetMapping("/{id}")
-  public ResponseEntity<?> findById(@PathVariable String id) {pinto
+  public ResponseEntity<?> findById(@PathVariable String id) {
     try {
       Long idLong = Long.parseLong(id);
       Empresas empresas = empresasService.buscarPorId(idLong);
@@ -53,14 +49,12 @@ public class EmpresaController {
 
   }
 
-  // Salvar Empresa
 
   @PostMapping
   public ResponseEntity<Empresas> save(@RequestBody Empresas empresas) {
     return ResponseEntity.status (HttpStatus.CREATED).body (empresasService.salvar(empresas));
   }
 
-  // Atualizar todos os dados da Empresa
 
   @PutMapping("/{id}")
   public ResponseEntity<?> update (@PathVariable String id, @RequestBody Empresas empresas) {
@@ -83,7 +77,6 @@ public class EmpresaController {
  
   }
   
-  // Excluir Empresa
 
   @DeleteMapping("/{id}")
   public ResponseEntity <?> delete(@PathVariable String id) {
