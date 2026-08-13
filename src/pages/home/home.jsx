@@ -3,47 +3,55 @@ import "./home.css";
 function Home({ entrar }) {
   return (
     <main className="home">
-      <div className="home-container">
 
-        <header className="home-header">
-          <h2 className="logo">Vitrine</h2>
-        </header>
+      <nav className="navbar">
+        <div className="navbar-logo">
+          Vitrine
+        </div>
 
-        <section className="home-content">
+        <div className="navbar-buttons">
+          <button className="navbar-register">
+            Registrar
+          </button>
 
-          <h1>
-            Encontre.
-            <br />
-            Divulgue.
-            <br />
-            Conecte.
-          </h1>
+          <button
+            className="navbar-login"
+            onClick={entrar}
+          >
+            Login
+          </button>
+        </div>
+      </nav>
 
-          <p>
-            Encontre pequenos negócios, produtos e serviços
-            em um só lugar.
-          </p>
+      <section className="home-content">
 
-          <div className="home-buttons">
+        <h1>
+          Vitrine
+        </h1>
 
-            <button
-              className="btn btn-primary"
-              onClick={entrar}
-            >
-              Entrar
-            </button>
+        <h2>
+          Simples para quem vende,
+          <br />
+          inteligente para quem procura.
+        </h2>
 
-            <button
-              className="btn btn-secondary"
-            >
-              Criar minha conta
-            </button>
+        <div className="home-buttons">
 
-          </div>
+          <button className="register-button">
+            Registrar
+          </button>
 
-        </section>
+          <button
+            className="login-button"
+            onClick={entrar}
+          >
+            Login
+          </button>
 
-      </div>
+        </div>
+
+      </section>
+
     </main>
   );
 }

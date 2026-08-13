@@ -1,113 +1,188 @@
 .home {
-    min-height: 100vh;
-    background-color: #f7f3ee;
-    color: #222;
+  min-height: 100vh;
+  width: 100%;
+
+  background-color: #000;
+  color: #fff;
 }
 
-.home-container {
-    width: 100%;
-    max-width: 1200px;
-    min-height: 100vh;
 
-    margin: 0 auto;
-    padding: 30px 50px;
+/* NAVBAR */
 
-    display: flex;
-    flex-direction: column;
+.navbar {
+  width: 100%;
+  height: 80px;
+
+  padding: 0 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #fff;
 }
 
-.home-header {
-    display: flex;
-    align-items: center;
+.navbar-logo {
+  font-size: 28px;
+  font-weight: 400;
 }
 
-.logo {
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: -1px;
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-.home-content p {
-  max-width: 500px;
+.navbar-buttons button {
+  background: none;
+  border: none;
 
-  font-size: 20px;
-  line-height: 1.5;
+  color: #fff;
 
-  color: #666;
+  font-size: 18px;
 
-  margin-bottom: 35px;
+  cursor: pointer;
 }
+
+
+/* CONTEÚDO */
+
+.home-content {
+  min-height: calc(100vh - 80px);
+
+  padding: 100px 7%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.home-content h1 {
+  font-size: 72px;
+  font-weight: 400;
+
+  margin: 0 0 60px;
+}
+
+.home-content h2 {
+  max-width: 650px;
+
+  font-size: 38px;
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  margin: 0 0 50px;
+}
+
+
+/* BOTÕES */
 
 .home-buttons {
   display: flex;
-  gap: 15px;
+  gap: 40px;
 }
 
-.btn {
-  padding: 15px 28px;
+.home-buttons button {
+  width: 330px;
+  height: 90px;
 
-  border-radius: 8px;
-
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 25px;
 
   cursor: pointer;
 
   transition: 0.2s ease;
 }
 
-.btn-primary {
-  background-color: #222;
-  color: white;
+.register-button {
+  background-color: #fff;
+  color: #000;
 
-  border: 2px solid #222;
+  border: 2px solid #fff;
+  border-radius: 15px;
 }
 
-.btn-secondary {
-  background-color: transparent;
-  color: #222;
+.login-button {
+  background-color: #000;
+  color: #fff;
 
-  border: 2px solid #222;
+  border: 2px solid #fff;
+  border-radius: 15px;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
+.home-buttons button:hover {
+  transform: translateY(-3px);
 }
 
-.btn-primary:hover {
-  background-color: #444;
-  border-color: #444;
-}
 
-.btn-secondary:hover {
-  background-color: #222;
-  color: white;
-}
+/* RESPONSIVIDADE */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
-  .home-container {
-    padding: 25px;
+  .navbar {
+    padding: 0 30px;
   }
 
   .home-content {
-    margin-bottom: 30px;
+    padding: 70px 30px;
   }
 
   .home-content h1 {
-    font-size: 50px;
-    letter-spacing: -2px;
+    font-size: 55px;
   }
 
-  .home-content p {
-    font-size: 17px;
+  .home-content h2 {
+    font-size: 30px;
   }
 
   .home-buttons {
+    width: 100%;
+
     flex-direction: column;
+    gap: 15px;
   }
 
-  .btn {
+  .home-buttons button {
     width: 100%;
+    max-width: 400px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar-logo {
+    font-size: 24px;
+  }
+
+  .navbar-buttons {
+    gap: 15px;
+  }
+
+  .navbar-buttons button {
+    font-size: 15px;
+  }
+
+  .home-content {
+    min-height: calc(100vh - 70px);
+
+    padding: 50px 25px;
+  }
+
+  .home-content h1 {
+    font-size: 48px;
+
+    margin-bottom: 40px;
+  }
+
+  .home-content h2 {
+    font-size: 25px;
+
+    margin-bottom: 40px;
   }
 }
