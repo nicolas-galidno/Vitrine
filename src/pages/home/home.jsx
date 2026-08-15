@@ -1,40 +1,58 @@
-import ".home/home.css";
+import "./home.css";
 
-function home() {
+function Home({ entrar }) {
   return (
-    <><main className="home">
-      <div className="home__container">
+    <main className="home">
 
-        <header className="home__header">
-          <h2 className="logo">Vitrine</h2>
-        </header>
+      <nav className="navbar">
+        <div className="navbar-logo">
+          Vitrine
+        </div>
 
-        <section className="home-content">
-          <h1>
-            Encontre
-            <br />
-            Divulgue
-            <br />
-            Conecte.
-          </h1>
+        <div className="navbar-buttons">
+          <button className="navbar-register">
+            Registrar
+          </button>
 
-          <p>
-            Encontre pequenos negócios, produtos e serviços em um só lugar.
-          </p>
+          <button
+            className="navbar-login"
+            onClick={entrar}
+          >
+            Login
+          </button>
+        </div>
+      </nav>
 
-          <div className="home-buttons">
-            <button className="btn btn--primary">Entrar
-            </button>
+      <section className="home-content">
 
-            <button className="btn btn-secondary">Criar minha conta
-            </button>
-          </div>
-        </section>
+        <h1>
+          Vitrine
+        </h1>
 
-      </div>
-    </main><footer className="home__footer">
-        <p>© 2026 Vitrine. Todos os direitos reservados.</p>
-      </footer></>
+        <h2>
+          Simples para quem vende,
+          <br />
+          inteligente para quem procura.
+        </h2>
+
+        <div className="home-buttons">
+
+          <button className="register-button">
+            Registrar
+          </button>
+
+          <button
+            className="login-button"
+            onClick={entrar}
+          >
+            Login
+          </button>
+
+        </div>
+
+      </section>
+
+    </main>
   );
 }
 

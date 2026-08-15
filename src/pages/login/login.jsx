@@ -1,73 +1,92 @@
-import "./Login.css";
+import "./login.css";
 
 function Login({ voltar }) {
-    return (
-        <main className="login">
-            <div className="login-container">
+  return (
+    <main className="login">
 
-                <button className="back-button" onClick={voltar}>
-                    ← Voltar
-                </button>
+      <div className="login-container">
 
-                <section className="login-content">
+        <header className="login-header">
+          <div className="login-logo">
+            Vitrine
+          </div>
 
-                    <div className="login-header">
-                        <span className="login-logo">Vitrine</span>
+          <h1>
+            Bem-vindo de volta!
+          </h1>
 
-                        <h1>Bem-vindo de volta!</h1>
+          <p>
+            Entre na sua conta para continuar.
+          </p>
+        </header>
 
-                        <p>
-                            Entre na sua conta para continuar.
-                        </p>
-                    </div>
 
-                    <form className="login-form">
+        <form className="login-form">
 
-                        <div className="form-group">
-                            <label htmlFor="email">
-                                E-mail
-                            </label>
+          <div className="input-group">
 
-                            <input
-                                type="email"
-                                id="email"
-                                placeholder="Digite seu e-mail"
-                            />
-                        </div>
+            <label htmlFor="email">
+              E-mail
+            </label>
 
-                        <div className="form-group">
-                            <label htmlFor="senha">
-                                Senha
-                            </label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Digite seu e-mail"
+            />
 
-                            <input
-                                type="password"
-                                id="senha"
-                                placeholder="Digite sua senha"
-                            />
-                        </div>
+          </div>
 
-                        <button
-                            type="submit"
-                            className="login-button"
-                        >
-                            Entrar
-                        </button>
 
-                    </form>
+          <div className="input-group">
 
-                    <p className="register-text">
-                        Ainda não possui uma conta?
-                        <button className="register-link">
-                            Criar conta
-                        </button>
-                    </p>
+            <label htmlFor="senha">
+              Senha
+            </label>
 
-                </section>
+            <input
+              type="password"
+              id="senha"
+              placeholder="Digite sua senha"
+            />
 
-            </div>
-        </main>
-    );
+          </div>
+
+
+          <button
+            type="submit"
+            className="login-submit"
+          >
+            Entrar
+          </button>
+
+        </form>
+
+
+        <div className="login-register">
+
+          <span>
+            Ainda não possui uma conta?
+          </span>
+
+          <button>
+            Criar agora
+          </button>
+
+        </div>
+
+
+        <button
+          className="back-button"
+          onClick={voltar}
+        >
+          ← Voltar
+        </button>
+
+      </div>
+
+    </main>
+  );
 }
 
 export default Login;

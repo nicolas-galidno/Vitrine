@@ -1,10 +1,9 @@
 import { useState } from "react";
 
-import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Login";
+import Home from "./pages/home/home";
+import Login from "./pages/login/login";
 
 function App() {
-
   const [pagina, setPagina] = useState("home");
 
   if (pagina === "login") {
